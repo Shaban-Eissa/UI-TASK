@@ -1,5 +1,5 @@
 import HeaderImage from "../assets/header-image.png";
-import Market from "./Icons/market";
+import Market from "./Icons/Market";
 import Location from "./Icons/Location";
 import BottomArrow from "./Icons/BottomArrow";
 import RotatedArrow from "./Icons/RotatedArrow";
