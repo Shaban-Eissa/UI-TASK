@@ -2,7 +2,7 @@ import RotatedArrow from "./Icons/RotatedArrow";
 import AppleStore from "./Icons/AppleStore";
 import GoogleStore from "./Icons/GoogleStore";
 
-import Iphone from "../assets/iphone.png";
+import Iphone from "../assets/iPhone.png";
 
 const Download = () => {
   return (
