@@ -2,7 +2,7 @@ import Salla from "../assets/Salla.svg";
 import Zed from "../assets/Zed.svg";
 import Sm from "../assets/SM.svg";
 import TIDIO from "../assets/TIDIO.svg";
-import Visa from "../assets/Visa.svg";
+import Visa from "../assets/VISA.svg";
 import Pay from "../assets/Pay.svg";
 import Mada from "../assets/mada.svg";
 
