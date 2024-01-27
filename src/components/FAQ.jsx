@@ -59,17 +59,17 @@ const FAQ = () => {
                 } flex flex-col items-stretch px-10 py-9 max-md:max-w-full max-md:px-5`}
                 onClick={() => handleClick(index)}
               >
-                <div className="flex items-stretch justify-between gap-5 max-md:max-w-full max-md:flex-wrap">
+                <div className="flex items-stretch justify-between gap-5 max-md:max-w-full max-md:flex-col">
                   <div className="text-neutral-800text-2xl font-medium lowercase grow shrink basis-auto my-auto">
                     <span className="font-semibold">{item.question}</span>
                   </div>
                   <div>
                     {activeIndex === index ? (
-                      <div className="cursor-pointer bg-violet-600 p-2 rounded-full">
+                      <div className="cursor-pointer bg-violet-600 p-2 rounded-full max-md:w-[40px]">
                         <Close />
                       </div>
                     ) : (
-                      <div className="cursor-pointer bg-white p-2 rounded-full">
+                      <div className="cursor-pointer bg-white p-2 rounded-full max-md:w-[40px]">
                         <Open />
                       </div>
                     )}

@@ -1,8 +1,46 @@
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+import { cardData } from "../data";
+import "../index.css";
+
 import Card from "./Card";
+
 import LeftArrow from "./Icons/LeftArrow";
 import RightArrow from "./Icons/RightArrow";
 
+const ButtonGroup = ({ next, previous }) => {
+  return (
+    <div className="absolute w-full flex justify-between px-4 md:px-8 lg:px-16 xl:px-32">
+      <button onClick={previous} className="carousel-arrow-left">
+        <LeftArrow />
+      </button>
+      <button onClick={next} className="carousel-arrow-right">
+        <RightArrow />
+      </button>
+    </div>
+  );
+};
+
 const SliderSection = () => {
+  const responsive = {
+    superLargeDesktop: {
+      breakpoint: { max: 4000, min: 3000 },
+      items: 4,
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 4,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2,
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+    },
+  };
+
   return (
     <div className="bg-white flex flex-col px-6 py-12 max-md:px-5">
       <div className="text-neutral-800 text-center text-4xl font-bold self-center mt-8 max-md:max-w-full">
@@ -13,59 +51,26 @@ const SliderSection = () => {
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ut leo
         et ligula auctor sodales in non orci.
       </div>
-      <div className="flex w-full items-center justify-evenly gap-5 mt-14 mb-8 max-md:flex-wrap max-md:mt-10">
-        <div className="max-md:hidden max-lg:hidden object-center bg-red-100 w-[60px] my-auto p-5 rounded-full cursor-pointer border border-blue-500">
-          <LeftArrow />
-        </div>
-
-        <div className="max-md:max-w-full">
-          <div className="gap-5 grid max-sm:grid-cols-1 max-md:grid-cols-2 max-lg:grid-cols-2 grid-cols-4 max-md:items-stretch max-md:gap-5">
-            <div className="flex flex-col items-stretch max-md:w-full max-lg:w-full max-md:ml-0">
+      <div className="mt-14 mb-8 max-md:mt-10">
+        <Carousel
+          responsive={responsive}
+          arrows={false}
+          itemClass="carousel-item-padding"
+          customButtonGroup={<ButtonGroup />}
+        >
+          {cardData.map((card, index) => (
+            <div key={index}>
               <Card
-                color="red"
-                rating="4.7"
-                category="Category"
-                businessName="Business Name"
-                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ut leo..."
-                location="Al Sahafah, Riyadh"
+                color={card.color}
+                rating={card.rating}
+                category={card.category}
+                businessName={card.businessName}
+                description={card.description}
+                location={card.location}
               />
             </div>
-
-            <div className="flex flex-col items-stretch max-md:w-full max-md:ml-0">
-              <Card
-                color="green"
-                rating="4.7"
-                category="Category"
-                businessName="Business Name"
-                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ut leo..."
-                location="Al Sahafah, Riyadh"
-              />
-            </div>
-
-            <div className="flex flex-col items-stretch max-md:w-full max-md:ml-0">
-              <Card
-                rating="4.7"
-                category="Category"
-                businessName="Business Name"
-                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ut leo..."
-                location="Al Sahafah, Riyadh"
-              />
-            </div>
-
-            <div className="flex flex-col items-stretch max-md:w-full max-md:ml-0">
-              <Card
-                rating="4.7"
-                category="Category"
-                businessName="Business Name"
-                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ut leo..."
-                location="Al Sahafah, Riyadh"
-              />
-            </div>
-          </div>
-        </div>
-        <div className="max-md:hidden max-lg:hidden object-center bg-red-100 w-[60px] my-auto p-5 rounded-full cursor-pointer border border-blue-500">
-          <RightArrow />
-        </div>
+          ))}
+        </Carousel>
       </div>
     </div>
   );

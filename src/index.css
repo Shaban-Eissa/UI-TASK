@@ -1,3 +1,31 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+.carousel-item-padding {
+    padding: 0 15px;
+    /* Adjust as needed */
+}
+
+.carousel-arrow-left,
+.carousel-arrow-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel-arrow-left {
+    left: 0;
+    background-color: #FAEAF7;
+    border-radius: 100%;
+    border: 1px solid blue;
+    padding: 25px;
+}
+
+.carousel-arrow-right {
+    right: 0;
+    background-color: #FAEAF7;
+    border-radius: 100%;
+    border: 1px solid blue;
+    padding: 25px;
+}

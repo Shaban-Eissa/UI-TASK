@@ -17,47 +17,114 @@ const Partnerships = () => {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor
           turpis eu arcu sagittis, id sagittis justo suscipit.
         </div>
-        <div className="flex justify-evenly items-center flex-wrap mt-8 gap-12">
-          <img
-            loading="lazy"
-            src={Salla}
-            className="max-md:max-w-full max-md:mt-10"
-          />
-
-          <img
-            loading="lazy"
-            src={Zed}
-            className="max-md:max-w-full max-md:mt-10"
-          />
-          <img
-            loading="lazy"
-            src={Sm}
-            className="max-md:max-w-full max-md:mt-10"
-          />
-          <img
-            loading="lazy"
-            src={TIDIO}
-            className="max-md:max-w-full max-md:mt-10"
-          />
-          <img
-            loading="lazy"
-            src={Visa}
-            className="max-md:max-w-full max-md:mt-10"
-          />
-          <img
-            loading="lazy"
-            src={Pay}
-            className="max-md:max-w-full max-md:mt-10"
-          />
-          <img
-            loading="lazy"
-            src={Mada}
-            className="max-md:max-w-full max-md:mt-10"
-          />
+        <div className="mt-8 w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]">
+          <div className="w-full inline-flex flex-nowrap">
+            <ul className="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll">
+              <li>
+                <img src={Salla} alt="Facebook" />
+              </li>
+              <li>
+                <img src={Zed} alt="Disney" />
+              </li>
+              <li>
+                <img src={Sm} alt="Airbnb" />
+              </li>
+              <li>
+                <img src={TIDIO} alt="Apple" />
+              </li>
+              <li>
+                <img src={Visa} alt="Spark" />
+              </li>
+              <li>
+                <img src={Pay} alt="Samsung" />
+              </li>
+              <li>
+                <img src={Mada} alt="Quora" />
+              </li>
+            </ul>
+            <ul
+              className="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll"
+              aria-hidden="true"
+            >
+              <li>
+                <img src={Salla} alt="Facebook" />
+              </li>
+              <li>
+                <img src={Zed} alt="Disney" />
+              </li>
+              <li>
+                <img src={Sm} alt="Airbnb" />
+              </li>
+              <li>
+                <img src={TIDIO} alt="Apple" />
+              </li>
+              <li>
+                <img src={Visa} alt="Spark" />
+              </li>
+              <li>
+                <img src={Pay} alt="Samsung" />
+              </li>
+              <li>
+                <img src={Mada} alt="Quora" />
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div className="mt-8 w-[80%] inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]">
+          <div className="w-full inline-flex flex-nowrap">
+            <ul className="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll">
+              <li>
+                <img src={Salla} alt="Facebook" />
+              </li>
+              <li>
+                <img src={Zed} alt="Disney" />
+              </li>
+              <li>
+                <img src={Sm} alt="Airbnb" />
+              </li>
+              <li>
+                <img src={TIDIO} alt="Apple" />
+              </li>
+              <li>
+                <img src={Visa} alt="Spark" />
+              </li>
+              <li>
+                <img src={Pay} alt="Samsung" />
+              </li>
+              <li>
+                <img src={Mada} alt="Quora" />
+              </li>
+            </ul>
+            <ul
+              className="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll"
+              aria-hidden="true"
+            >
+              <li>
+                <img src={Salla} alt="Facebook" />
+              </li>
+              <li>
+                <img src={Zed} alt="Disney" />
+              </li>
+              <li>
+                <img src={Sm} alt="Airbnb" />
+              </li>
+              <li>
+                <img src={TIDIO} alt="Apple" />
+              </li>
+              <li>
+                <img src={Visa} alt="Spark" />
+              </li>
+              <li>
+                <img src={Pay} alt="Samsung" />
+              </li>
+              <li>
+                <img src={Mada} alt="Quora" />
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
   );
 };
-
 export default Partnerships;

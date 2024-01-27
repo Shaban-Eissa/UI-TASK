@@ -2,7 +2,7 @@ import Location from "./Icons/Location";
 import Rating from "./Icons/Rating";
 
 const Card = ({ rating, category, businessName, description, location }) => (
-  <div className="shadow-lg bg-white flex flex-col items-stretch pb-4 rounded-xl">
+  <div className="shadow-lg bg-white flex flex-col items-stretch pb-4 rounded-xl mb-4">
     <div className="bg-orange-100 flex w-full flex-col pl-4 pr-16 pt-4 pb-12 rounded-xl items-start max-md:pr-5">
       <div className="items-stretch rounded bg-white flex w-[68px] max-w-full gap-1 mb-24 px-2 py-1 max-md:mb-10">
         <Rating />
